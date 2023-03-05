@@ -13,7 +13,7 @@ silhouette_scores = []
 
 # Try k from 2 to 10 clusters and calculate the silhouette score for each value of k
 for k in range(2, 11):
-    kmeans = KMeans(n_clusters=k, random_state=42)
+    kmeans = KMeans(n_clusters=k, random_state=8)
     kmeans.fit(X)
     labels = kmeans.labels_
     score = silhouette_score(X, labels)
